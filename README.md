@@ -8,13 +8,13 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Friday| Project Description | Incomplete
+|Friday| Project Description/Wire-frames/Project Aprroval | Incomplete
 |Saturday| Wireframes / Priority Matrix / Functional Components | Incomplete
-|Sunday| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Monday| Pseudocode / actual code | Incomplete
-|Tuesday| Initial Clickable Model  | Incomplete
-|Wednesday| MVP | Incomplete
-|Thursday| Present | Incomplete
+|Sunday| React Components/API Calls| Incomplete
+|Monday|  | Incomplete
+|Tuesday|  | Incomplete
+|Wednesday| | Incomplete
+|Thursday|  | Incomplete
 
 
 ## Project Description
