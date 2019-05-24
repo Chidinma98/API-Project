@@ -45,7 +45,9 @@ Create another component of all the places they have been.
 
 #### PostMVP 
 
-Have People be able to upload pictures
+Have People be able to upload pictures.
+
+
 Allow people to link it to their social Media.
 
 ## React Architectural Design
