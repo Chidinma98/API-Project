@@ -8,18 +8,21 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 2| Wireframes / Priority Matrix / Functional Components | Incomplete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| Pseudocode / actual code | Incomplete
-|Day 5| Initial Clickable Model  | Incomplete
-|Day 6| MVP | Incomplete
-|Day 7| Present | Incomplete
+|Friday| Project Description | Incomplete
+|Saturday| Wireframes / Priority Matrix / Functional Components | Incomplete
+|Sunday| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Monday| Pseudocode / actual code | Incomplete
+|Tuesday| Initial Clickable Model  | Incomplete
+|Wednesday| MVP | Incomplete
+|Thursday| Present | Incomplete
 
 
 ## Project Description
+An e-passport
 
-A map thst teaches you about all the countries in the would. You click on a localtion in the map and it brings up information about that place. An Online Passport..Keps tracks of all the places you've been and would like to go.
+Keeps track of all the places, you have been to and all the places you would like to Go. You click on a localtion in the map and it brings up information about that place. An Online Passport..Keps tracks of all the places you've been and would like to go.
+
+API Link: https://restcountries.eu/rest/v2/all
 
 ## Wireframes
 
@@ -70,7 +73,6 @@ Based on the initial logic defined in the previous sections try and breakdown th
 |  Map | Renders information about that country and users can put it on a traled or would like to travel bucket | 
 
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
 #### SAMPLE.....
 | Component | Priority | Estimated Time | Actual Time |
