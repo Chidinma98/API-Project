@@ -6,7 +6,7 @@ import Traveled from './Components/Traveled'
 import Traveling from './Components/Traveling'
 import Options from './Components/Options'
 import { Route, Link } from "react-router-dom";
-// let countries;
+
 
 
 class App extends Component {
@@ -57,7 +57,7 @@ class App extends Component {
     return (
       // console.log(this.state.places)
       <div>
-        {console.log(this.state.places)}
+        {/* {console.log(this.state.places)} */}
         <header>
 
         </header>
@@ -66,15 +66,14 @@ class App extends Component {
 
           <button type='submit' name='info'>Submit</button>
         </form>
-        
-          <h1> <Link to = "/options">Options </Link></h1>
-        
+
+        <h1> <Link to="/options">Options </Link></h1>
+
 
         <main>
 
-          <Route strict path="/options" render={() => <Options countries={this.state.countries} />
-
-
+          <Route strict path="/options" render={() => <Options countries={this.state.places} 
+          />
 
           } />
 

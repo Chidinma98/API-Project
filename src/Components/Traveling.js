@@ -1,20 +1,20 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 class Traveling extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
 
-render(){
-    return(
-        <div>
+    render() {
+        return (
+            <div>
 
-        </div>
-    )
+            </div>
+        )
 
 
-    
-}
+
+    }
 
 
 

@@ -5,20 +5,19 @@ class Options extends Component {
         super(props)
     }
 
-render(){
-    const {countries} = this.props
-    console.log(countries);
+render(props){
+    //  const {countries} = this.props
+    // console.log(countries);
+    console.log(this.props.countries);
     return(
         <div>
-{/* <h1>{this.props.countries[0].name}</h1> */}
+
         </div>
     )
 
 
     
 }
-
-
 
 
 }
