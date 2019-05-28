@@ -17,6 +17,7 @@ class Map extends Component {
         }
 
         this.showsInput = this.showsInput.bind(this)
+        this.handleTraveledToggle = this.handleTraveledToggle.bind(this)
     }
 
 
@@ -34,11 +35,21 @@ class Map extends Component {
             traveled: [],
             traveling: []
 
-
         })
     }
+    handleTraveledToggle(place) {
+        let newTraveledArray = [...this.state.traveled]
+        newTraveledArray.push(place)
+        this.setState({
+            traveled: newTraveledArray
+        })
 
 
+    }
+
+    handleTravelingToggle() {
+        let newTravelingArray = [...this.state.traveling]
+    }
 
 
     render() {
@@ -48,12 +59,7 @@ class Map extends Component {
             <div>
 
                 <header>
-                    <nav>
-                        <ul>
-                            <li><Link to='/traveled'>Traveled</Link></li>
-                            <li><Link to='/traveling'>Traveling</Link></li>
-                        </ul>
-                    </nav>
+
 
                 </header>
                 <form onSubmit={this.showsInput}>
@@ -62,7 +68,8 @@ class Map extends Component {
                 </form>
                 <h1>{continent}</h1>
 
-                {this.state.places.map((place, index) => { return <Country key={index} place={place} /> })}
+                {this.state.places.map((place, index) => { return <Country key={index} place={place} handleTraveledToggle={this.handleTraveledToggle} /> })}
+
 
 
 

@@ -26,6 +26,12 @@ class App extends Component {
         <header>
 
           <h2><Link to='/map'> PASSPORT ++ </Link></h2>
+          <nav>
+                        <ul>
+                            <li><Link to='/traveled'>Traveled</Link></li>
+                            <li><Link to='/traveling'>Traveling</Link></li>
+                        </ul>
+                    </nav>
         </header>
 
 
