@@ -9,8 +9,9 @@ class Country extends Component {
 
     render() {
         return (
-            <div>
-               <div className = 'country'> <p>{this.props.place.name}</p> </div>
+            <div className='places'>
+                <div className='country'> <p>{this.props.place.name}</p>
+                </div>
             </div>
         )
     }
