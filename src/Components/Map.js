@@ -11,16 +11,16 @@ class Map extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            places: []
-
-
+            places: [],
+            traveled: [],
+            traveling: []
         }
 
         this.showsInput = this.showsInput.bind(this)
     }
 
 
-   
+
 
 
     showsInput = async (event) => {
@@ -29,12 +29,12 @@ class Map extends Component {
         const info = await axios.get(`https://restcountries.eu/rest/v2/region/${this.refs.continent.value}`)
 
         continent = this.refs.continent.value
-
-
-
-
         this.setState({
-            places: info.data
+            places: info.data,
+            traveled: [],
+            traveling: []
+
+
         })
     }
 

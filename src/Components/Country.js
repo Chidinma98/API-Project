@@ -7,10 +7,15 @@ class Country extends Component {
         super(props)
     }
 
+
+
     render() {
         return (
             <div className='places'>
-                <div className='country'> <p>{this.props.place.name}</p>
+                <div className='country'> 
+                <h1> * </h1>
+                <h1> + </h1>
+                <p>{this.props.place.name} </p>
                 </div>
             </div>
         )
