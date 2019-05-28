@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Map from './Map'
 
 class Options extends Component {
     constructor(props){
@@ -8,7 +9,7 @@ class Options extends Component {
 render(props){
     //  const {countries} = this.props
     // console.log(countries);
-    console.log(this.props.countries);
+    // console.log(this.props.countries);
     return(
         <div>
 

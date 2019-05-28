@@ -8,7 +8,7 @@ class Traveled extends Component {
 render(){
     return(
         <div>
-
+<p>This is the traveled Path</p>
         </div>
     )
 
