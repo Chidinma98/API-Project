@@ -22,7 +22,7 @@ class Country extends Component {
             <div className='places'>
                 <div className='country'>
                     <h1 onClick={() => (        this.props.handleTraveledToggle(this.props.place))}> T </h1>
-                    <h1> W </h1>
+                    <h1 onClick = {() => (this.props.handleTravelingToggle(this.props.place))}> W </h1>
                     <p>{this.props.place.name} </p>
                 </div>
             </div>

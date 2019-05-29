@@ -25,6 +25,7 @@ class App extends Component {
 
     this.showsInput = this.showsInput.bind(this)
     this.handleTraveledToggle = this.handleTraveledToggle.bind(this)
+    this.handleTravelingToggle = this.handleTravelingToggle.bind(this)
 
   }
 
@@ -56,6 +57,16 @@ console.log('hi')
 
   }
 
+  
+  handleTravelingToggle(place) {
+    let newTravelingArray = [...this.state.traveling]
+    newTravelingArray.push(place)
+    this.setState({
+      traveling: newTravelingArray
+    })
+console.log('who')
+}
+  
   render() {
 
     return (
@@ -86,11 +97,12 @@ console.log('hi')
 
           <Route exact path='/map' render={() => <Map continent={this.state.continent} places={this.state.places} 
           handleTraveledToggle={this.handleTraveledToggle}
+          handleTravelingToggle = {this.handleTravelingToggle}
           />} />
 
           <Route exact path='/traveled' render={() => <Traveled  traveled = {this.state.traveled}/>} />
 
-          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} />} />
+          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling = {this.state.traveling}/>} />
 
           <Route exact path='/country' 
           // render={() =>

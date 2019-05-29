@@ -9,7 +9,7 @@ class Traveled extends Component {
 render(props){
     return(
         <div>
-            {/* {console.log(this.props.traveled)} */}
+            
     
      {this.props.traveled.map((travel)=> (travel.name))} 
 
