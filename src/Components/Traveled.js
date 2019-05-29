@@ -9,8 +9,9 @@ class Traveled extends Component {
 render(props){
     return(
         <div>
+            {/* {console.log(this.props.traveled)} */}
     
-     {console.log(this.props.continent)} 
+     {this.props.traveled.map((travel)=> (travel.name))} 
 
 
         </div>

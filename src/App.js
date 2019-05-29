@@ -88,7 +88,7 @@ console.log('hi')
           handleTraveledToggle={this.handleTraveledToggle}
           />} />
 
-          <Route exact path='/traveled' render={() => <Traveled continent={this.state.continent} />} />
+          <Route exact path='/traveled' render={() => <Traveled  traveled = {this.state.traveled}/>} />
 
           <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} />} />
 
