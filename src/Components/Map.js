@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-// import './App.css';
 import axios from 'axios'
 import Options from './Options'
 import { Route, Link } from "react-router-dom";
 import Country from './Country'
 import Traveled from './Traveled';
-let continent;
+import App from '../App'
 
 
 class Map extends Component {
@@ -26,11 +25,11 @@ class Map extends Component {
     handleTraveledToggle(place) {
         let newTraveledArray = [...this.state.traveled]
         newTraveledArray.push(place)
-        this.setState({
-            traveled: newTraveledArray
+        // this.setState({
+        //     traveled: newTraveledArray
         
         
-        })
+        // })
 
 
     }
@@ -45,18 +44,19 @@ class Map extends Component {
         return (
 
             <div>
+                 {console.log(this.props.places)}
 
                 <header>
 
 
                 </header>
                
-                <h1>{this.props.continent}</h1>
+              <h1> {this.props.continent} </h1> 
                  
-              
+              {this.props.places.map((place, index) => {return <Country place = {place}key = {index}/>})}
 
-                {this.state.places.map((place, index) => { return <Country key={index} place={place} handleTraveledToggle={this.handleTraveledToggle} /> })}
-              
+                {/* {this.state.places.map((place, index) => { return <Country key={index} place={place} handleTraveledToggle={this.handleTraveledToggle} /> })}
+               */}
 
 
 

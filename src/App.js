@@ -16,7 +16,7 @@ class App extends Component {
     super(props)
     this.state = {
       places: [],
-      continent:'',
+      continent: '',
       traveled: [],
       traveling: []
 
@@ -32,14 +32,15 @@ class App extends Component {
 
     const info = await axios.get(`https://restcountries.eu/rest/v2/region/${this.refs.continent.value}`)
 
-    
-    this.setState({
+
+     await this.setState({
       places: info.data,
-      continent:this.refs.continent.value,
+      continent: this.refs.continent.value,
       traveled: [],
       traveling: []
 
     })
+
   }
 
 
@@ -51,7 +52,7 @@ class App extends Component {
       <div>
 
         <header>
-       
+
 
 
           <h2><Link to='/map'> PASSPORT ++ </Link></h2>
@@ -62,20 +63,22 @@ class App extends Component {
             </ul>
           </nav>
         </header>
-        <form onSubmit = {this.showsInput}>
-        <input type='text' name='location' placeholder="Choose A Contient" ref='continent' />
-                    <button type='submit' name='info'>Submit</button>
+        <form onSubmit={this.showsInput}>
+          <input type='text' name='location' placeholder="Choose A Contient" ref='continent' />
+          <button type='submit' name='info'><Link to = "/map">Submit</Link></button>
 
-</form>
+        </form>
 
 
 
         <main>
-          <Route exact path='/map' render={() => <Map  continent= {this.state.continent} />} />
-          
-          <Route exact path='/traveled' component={Traveled}
-          />
-          <Route exact path='/traveling' component={Traveling} />
+        
+          <Route exact path='/map' render={() => <Map continent={this.state.continent} places = {this.state.places}/>} />
+
+          <Route exact path='/traveled' render={() => <Traveled continent= {this.state.continent} />} />
+
+          <Route exact path='/traveling' render={() => <Traveling continent= {this.state.continent} />} />
+        
         </main>
 
       </div>

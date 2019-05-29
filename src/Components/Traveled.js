@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Map from './Map'
+import App from '../App'
 
 class Traveled extends Component {
     constructor(props){
@@ -9,7 +9,8 @@ class Traveled extends Component {
 render(props){
     return(
         <div>
-    <p>{this.props.travelData.map((travel) => travel.name)}</p>
+    
+     {console.log(this.props.continent)} 
 
 
         </div>

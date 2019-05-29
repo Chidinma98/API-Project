@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import App from '../App'
 
 class Traveling extends Component {
     constructor(props) {
         super(props)
     }
 
-    render() {
+    render(props) {
         return (
             <div>
-<p>This is the traveling Path</p>
+{console.log(this.props.continent)}
             </div>
         )
 
