@@ -7,6 +7,7 @@ import Traveling from './Components/Traveling'
 import Options from './Components/Options'
 import { Route, Link } from "react-router-dom";
 import Map from './Components/Map'
+import Country from './Components/Country'
 
 
 
@@ -23,6 +24,7 @@ class App extends Component {
     }
 
     this.showsInput = this.showsInput.bind(this)
+    this.handleTraveledToggle = this.handleTraveledToggle.bind(this)
 
   }
 
@@ -33,17 +35,26 @@ class App extends Component {
     const info = await axios.get(`https://restcountries.eu/rest/v2/region/${this.refs.continent.value}`)
 
 
-     await this.setState({
+    this.setState({
       places: info.data,
       continent: this.refs.continent.value,
       traveled: [],
       traveling: []
-
     })
 
   }
 
 
+  handleTraveledToggle(place) {
+    let newTraveledArray = [...this.state.traveled]
+    newTraveledArray.push(place)
+    this.setState({
+      traveled: newTraveledArray
+    })
+console.log('hi')
+
+
+  }
 
   render() {
 
@@ -65,20 +76,31 @@ class App extends Component {
         </header>
         <form onSubmit={this.showsInput}>
           <input type='text' name='location' placeholder="Choose A Contient" ref='continent' />
-          <button type='submit' name='info'><Link to = "/map">Submit</Link></button>
+          <button type='submit' name='info'>Submit</button>
 
         </form>
 
 
 
         <main>
-        
-          <Route exact path='/map' render={() => <Map continent={this.state.continent} places = {this.state.places}/>} />
 
-          <Route exact path='/traveled' render={() => <Traveled continent= {this.state.continent} />} />
+          <Route exact path='/map' render={() => <Map continent={this.state.continent} places={this.state.places} 
+          handleTraveledToggle={this.handleTraveledToggle}
+          />} />
 
-          <Route exact path='/traveling' render={() => <Traveling continent= {this.state.continent} />} />
-        
+          <Route exact path='/traveled' render={() => <Traveled continent={this.state.continent} />} />
+
+          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} />} />
+
+          <Route exact path='/country' 
+          // render={() =>
+            // <Country handleTraveledToggle={this.handleTraveledToggle} />} />
+
+            component= {Country}/>
+
+
+
+
         </main>
 
       </div>
