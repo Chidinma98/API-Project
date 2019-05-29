@@ -1,14 +1,17 @@
 import React, {Component} from 'react'
+import Map from './Map'
 
 class Traveled extends Component {
     constructor(props){
         super(props)
     }
 
-render(){
+render(props){
     return(
         <div>
-<p>This is the traveled Path</p>
+    <p>{this.props.travelData.map((travel) => travel.name)}</p>
+
+
         </div>
     )
 

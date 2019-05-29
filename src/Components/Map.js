@@ -4,6 +4,7 @@ import axios from 'axios'
 import Options from './Options'
 import { Route, Link } from "react-router-dom";
 import Country from './Country'
+import Traveled from './Traveled';
 let continent;
 
 
@@ -13,7 +14,8 @@ class Map extends Component {
         this.state = {
             places: [],
             traveled: [],
-            traveling: []
+            traveling: [],
+            arrived: []
         }
 
         this.showsInput = this.showsInput.bind(this)
@@ -33,18 +35,23 @@ class Map extends Component {
         this.setState({
             places: info.data,
             traveled: [],
-            traveling: []
+            traveling: [],
+            
+
 
         })
     }
+
     handleTraveledToggle(place) {
         let newTraveledArray = [...this.state.traveled]
         newTraveledArray.push(place)
         this.setState({
             traveled: newTraveledArray
+        
+        
         })
 
-
+this.props.updateState(newTraveledArray)
     }
 
     handleTravelingToggle() {
@@ -59,7 +66,7 @@ class Map extends Component {
             <div>
 
                 <header>
-
+{/*  */}
 
                 </header>
                 <form onSubmit={this.showsInput}>
@@ -67,9 +74,13 @@ class Map extends Component {
                     <button type='submit' name='info'>Submit</button>
                 </form>
                 <h1>{continent}</h1>
+                 
+                {/* {this.state.traveled.map((travel, index) => {return <Traveled travel= {travel} key={index} />})} */}
+
+                {/* <Traveled travels = {this.state.traveled}/> */}
 
                 {this.state.places.map((place, index) => { return <Country key={index} place={place} handleTraveledToggle={this.handleTraveledToggle} /> })}
-
+              
 
 
 
@@ -82,6 +93,7 @@ class Map extends Component {
 
 
             </div>
+
 
 
         )
