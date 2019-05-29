@@ -11,14 +11,9 @@ let continent;
 class Map extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            places: [],
-            traveled: [],
-            traveling: [],
-            arrived: []
-        }
+       
 
-        this.showsInput = this.showsInput.bind(this)
+       
         this.handleTraveledToggle = this.handleTraveledToggle.bind(this)
     }
 
@@ -26,21 +21,7 @@ class Map extends Component {
 
 
 
-    showsInput = async (event) => {
-        event.preventDefault()
-
-        const info = await axios.get(`https://restcountries.eu/rest/v2/region/${this.refs.continent.value}`)
-
-        continent = this.refs.continent.value
-        this.setState({
-            places: info.data,
-            traveled: [],
-            traveling: [],
-            
-
-
-        })
-    }
+   
 
     handleTraveledToggle(place) {
         let newTraveledArray = [...this.state.traveled]
@@ -51,7 +32,7 @@ class Map extends Component {
         
         })
 
-this.props.updateState(newTraveledArray)
+
     }
 
     handleTravelingToggle() {
@@ -59,25 +40,20 @@ this.props.updateState(newTraveledArray)
     }
 
 
-    render() {
+    render(props) {
 
         return (
 
             <div>
 
                 <header>
-{/*  */}
+
 
                 </header>
-                <form onSubmit={this.showsInput}>
-                    <input type='text' name='location' placeholder="Choose A Contient" ref='continent' />
-                    <button type='submit' name='info'>Submit</button>
-                </form>
-                <h1>{continent}</h1>
+               
+                <h1>{this.props.continent}</h1>
                  
-                {/* {this.state.traveled.map((travel, index) => {return <Traveled travel= {travel} key={index} />})} */}
-
-                {/* <Traveled travels = {this.state.traveled}/> */}
+              
 
                 {this.state.places.map((place, index) => { return <Country key={index} place={place} handleTraveledToggle={this.handleTraveledToggle} /> })}
               
@@ -85,9 +61,7 @@ this.props.updateState(newTraveledArray)
 
 
                 <main>
-                    {/* <Route strict path="/options" render={() => <Options countries={this.state.places}
-                    />
-                    } /> */}
+                 
                 </main>
 
 
