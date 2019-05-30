@@ -11,9 +11,14 @@ class Traveled extends Component {
         return (
             <div>
 
+                <div className='destination'>
+                    {this.props.traveled.map((travel, index) => <h1 key={index} onClick={() => (this.props.showInfo(travel.name))}> {travel.name}</h1>)}
+                </div>
 
-                {this.props.traveled.map((travel, index) => <h1 key={index} onClick = {() =>(this.props.showInfo(travel.name))}> {travel.name}</h1>)}
-
+                <div className='details'>
+                    <h1>FACTS</h1>
+                    <h2>{this.props.name}</h2>
+                </div>
 
             </div>
         )

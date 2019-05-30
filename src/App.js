@@ -77,13 +77,13 @@ class App extends Component {
   showInfo = async (place) => {
     const fact = await axios.get( `https://restcountries.eu/rest/v2/name/${place}?fullText=true`)
 
-  
-console.log(fact.data)
+  const detail = fact.data[0]
 
-// this.setState({
-//   name:fact.data.name,
-//   flag:''
-// })
+
+this.setState({
+  name:detail.name,
+  flag:''
+})
 
   }
   
@@ -123,9 +123,9 @@ console.log(fact.data)
             showInfo = {this.showInfo}
           />} />
 
-          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo}/>} />
+          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo} name = {this.state.name}/>} />
 
-          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo = {this.showInfo}/>} />
+          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo = {this.showInfo}/>} name = {this.state.name}/>
 
           <Route exact path='/country'
 
