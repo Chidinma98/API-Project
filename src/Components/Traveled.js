@@ -12,7 +12,7 @@ class Traveled extends Component {
             <div>
 
 
-                {this.props.traveled.map((travel, index) => <h1 key={index} onClick = {this.props.showInfo(travel.name)}> {travel.name}</h1>)}
+                {this.props.traveled.map((travel, index) => <h1 key={index} onClick = {() =>(this.props.showInfo(travel.name))}> {travel.name}</h1>)}
 
 
             </div>
