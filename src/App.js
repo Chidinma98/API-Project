@@ -22,7 +22,15 @@ class App extends Component {
       traveled: [],
       traveling: [],
       name:'',
-      flag:''
+      flag:'',
+      currency:'',
+      capital:'',
+      languages:'',
+      subregion:'',
+      symbol:''
+      
+
+      
 
     }
 
@@ -78,11 +86,16 @@ class App extends Component {
     const fact = await axios.get( `https://restcountries.eu/rest/v2/name/${place}?fullText=true`)
 
   const detail = fact.data[0]
-
+console.log(detail)
 
 this.setState({
   name: detail.name,
-  flag:''
+  flag:'',
+  currency: detail.currencies[0].name,
+  capital: detail.capital,
+  languages:detail.languages[0].name,
+  subregion: detail.subregion,
+  symbol: detail.currencies[0].symbol
 })
 
   }
@@ -98,14 +111,16 @@ this.setState({
         <header>
 
 
-
+{/* <h1>PASSPORT ++</h1> */}
           <h2><Link to='/map'> PASSPORT ++ </Link></h2>
+          
           <nav>
             <ul>
               <li><Link to='/traveled'>Traveled</Link></li>
               <li><Link to='/traveling'>Traveling</Link></li>
             </ul>
           </nav>
+        
         </header>
         <form onSubmit={this.showsInput}>
           <input type='text' name='location' placeholder="Choose A Contient" ref='continent' />
@@ -123,7 +138,14 @@ this.setState({
             showInfo = {this.showInfo}
           />} />
 
-          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo} name = {this.state.name}/>} />
+          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo} name = {this.state.name}
+          currency = {this.state.currency}
+          capital = {this.state.capital}
+          languages = {this.state.languages}
+          subregion = {this.state.subregion}
+          symbol = {this.state.symbol}
+          
+          />} />
 
           <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo = {this.showInfo}  name = {this.state.name}/>} />
 
