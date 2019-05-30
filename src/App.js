@@ -4,7 +4,7 @@ import './App.css';
 import axios from 'axios'
 import Traveled from './Components/Traveled'
 import Traveling from './Components/Traveling'
-import Options from './Components/Options'
+// import Options from './Components/Options'
 import { Route, Link } from "react-router-dom";
 import Map from './Components/Map'
 import Country from './Components/Country'
