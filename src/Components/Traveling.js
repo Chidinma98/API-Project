@@ -10,13 +10,18 @@ class Traveling extends Component {
     render(props) {
         return (
             <div>
-<div>
+<div className = 'comlist'>
 {this.props.traveling.map((travel, index)=> <h1 key = {index}onClick = { () =>(this.props.showInfo(travel.name))}> {travel.name } </h1> )}
     </div>        
-            <div>
-                <h1>FACTS</h1>
-                <h2>{this.props.name}</h2>
-            </div>
+    <div className='details'>
+                    <h1>FACTS</h1>
+                    <h2>Country: {this.props.name}</h2>
+                    <h2>Capital: {this.props.capital}</h2>
+                    <h2>Currency: {this.props.currency}  ({this.props.symbol}) </h2>
+                    <h2>Languages: {this.props.languages}</h2>
+                    <h2>Subregion: {this.props. subregion}</h2>
+
+                </div>
             
             
             

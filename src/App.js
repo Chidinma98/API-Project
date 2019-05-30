@@ -138,7 +138,8 @@ this.setState({
             showInfo = {this.showInfo}
           />} />
 
-          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo} name = {this.state.name}
+          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo} 
+          name = {this.state.name}
           currency = {this.state.currency}
           capital = {this.state.capital}
           languages = {this.state.languages}
@@ -147,7 +148,20 @@ this.setState({
           
           />} />
 
-          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo = {this.showInfo}  name = {this.state.name}/>} />
+          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo = {this.showInfo}  name = {this.state.name}
+             name = {this.state.name}
+             currency = {this.state.currency}
+             capital = {this.state.capital}
+             languages = {this.state.languages}
+             subregion = {this.state.subregion}
+             symbol = {this.state.symbol}
+          
+          
+          
+          
+          
+          
+          />} />
 
           <Route exact path='/country'
 
