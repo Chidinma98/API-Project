@@ -4,11 +4,11 @@ import './App.css';
 import axios from 'axios'
 import Traveled from './Components/Traveled'
 import Traveling from './Components/Traveling'
-
 import { Route, Link } from "react-router-dom";
 import Map from './Components/Map'
 import Country from './Components/Country'
-import { async } from 'q';
+import './index.css'
+// import { async } from 'q';
 
 
 
@@ -21,16 +21,16 @@ class App extends Component {
       continent: '',
       traveled: [],
       traveling: [],
-      name:'',
-      flag:'',
-      currency:'',
-      capital:'',
-      languages:'',
-      subregion:'',
-      symbol:''
-      
+      name: '',
+      flag: '',
+      currency: '',
+      capital: '',
+      languages: '',
+      subregion: '',
+      symbol: ''
 
-      
+
+
 
     }
 
@@ -53,7 +53,7 @@ class App extends Component {
       continent: this.refs.continent.value,
       traveled: [],
       traveling: []
-    
+
 
     })
 
@@ -81,27 +81,27 @@ class App extends Component {
 
   }
 
-  
+
   showInfo = async (place) => {
-    const fact = await axios.get( `https://restcountries.eu/rest/v2/name/${place}?fullText=true`)
+    const fact = await axios.get(`https://restcountries.eu/rest/v2/name/${place}?fullText=true`)
 
-  const detail = fact.data[0]
-console.log(detail)
+    const detail = fact.data[0]
 
-this.setState({
-  name: detail.name,
-  flag:'',
-  currency: detail.currencies[0].name,
-  capital: detail.capital,
-  languages:detail.languages[0].name,
-  subregion: detail.subregion,
-  symbol: detail.currencies[0].symbol,
-  flag: detail.flag
-})
+
+    this.setState({
+      name: detail.name,
+      flag: '',
+      currency: detail.currencies[0].name,
+      capital: detail.capital,
+      languages: detail.languages[0].name,
+      subregion: detail.subregion,
+      symbol: detail.currencies[0].symbol,
+      flag: detail.flag
+    })
 
   }
-  
-  
+
+
 
   render() {
 
@@ -112,17 +112,22 @@ this.setState({
         <header>
 
 
-{/* <h1>PASSPORT ++</h1> */}
-          <h2><Link to='/map'> PASSPORT ++ </Link></h2>
-          
-          <nav >
+
+          <h1 className = 'intro'>PASSPORT ++</h1>
+
+          <nav className = "main-nav">
             <ul>
+              <li><Link to='/map'> Map </Link></li>
               <li><Link to='/traveled'>Traveled</Link></li>
               <li><Link to='/traveling'>Traveling</Link></li>
             </ul>
           </nav>
-        
+
         </header>
+        
+        
+        
+        
         <form onSubmit={this.showsInput}>
           <input type='text' name='location' placeholder="Choose A Contient" ref='continent' />
           <button type='submit' name='info'>Submit</button>
@@ -136,38 +141,38 @@ this.setState({
           <Route exact path='/map' render={() => <Map continent={this.state.continent} places={this.state.places}
             handleTraveledToggle={this.handleTraveledToggle}
             handleTravelingToggle={this.handleTravelingToggle}
-            showInfo = {this.showInfo}
-            traveled = {this.state.traveled}
-            traveling = {this.state.traveling}
-            
+            showInfo={this.showInfo}
+            traveled={this.state.traveled}
+            traveling={this.state.traveling}
+
           />} />
 
-          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo} 
-          name = {this.state.name}
-          currency = {this.state.currency}
-          capital = {this.state.capital}
-          languages = {this.state.languages}
-          subregion = {this.state.subregion}
-          symbol = {this.state.symbol}
-          flag = {this.state.flag}
+          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo={this.showInfo}
+            name={this.state.name}
+            currency={this.state.currency}
+            capital={this.state.capital}
+            languages={this.state.languages}
+            subregion={this.state.subregion}
+            symbol={this.state.symbol}
+            flag={this.state.flag}
 
-          
-          
+
+
           />} />
 
-          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo = {this.showInfo}  name = {this.state.name}
-             name = {this.state.name}
-             currency = {this.state.currency}
-             capital = {this.state.capital}
-             languages = {this.state.languages}
-             subregion = {this.state.subregion}
-             symbol = {this.state.symbol}
-          
-          
-          
-          
-          
-          
+          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo={this.showInfo} name={this.state.name}
+            name={this.state.name}
+            currency={this.state.currency}
+            capital={this.state.capital}
+            languages={this.state.languages}
+            subregion={this.state.subregion}
+            symbol={this.state.symbol}
+
+
+
+
+
+
           />} />
 
           <Route exact path='/country'
