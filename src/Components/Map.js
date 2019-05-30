@@ -11,9 +11,6 @@ class Map extends Component {
     constructor(props) {
         super(props)
        
-
-       
-        // this.handleTraveledToggle = this.handleTraveledToggle.bind(this)
     }
 
 
@@ -22,21 +19,7 @@ class Map extends Component {
 
    
 
-    // handleTraveledToggle(place) {
-    //     let newTraveledArray = [...this.state.traveled]
-    //     newTraveledArray.push(place)
-    //     // this.setState({
-    //     //     traveled: newTraveledArray
-        
-        
-    //     // })
-
-
-    // }
-
-    // handleTravelingToggle() {
-    //     let newTravelingArray = [...this.state.traveling]
-    // }
+ 
 
 
     render(props) {
@@ -44,7 +27,7 @@ class Map extends Component {
         return (
 
             <div>
-                 {console.log(this.props.places)}
+              
 
                 <header>
 
@@ -61,8 +44,7 @@ class Map extends Component {
               handleTravelingToggle = {this.props.handleTravelingToggle}
               />))}
 
-                {/* {this.state.places.map((place, index) => { return <Country key={index} place={place} handleTraveledToggle={this.handleTraveledToggle} /> })}
-               */}
+               
 
 
 

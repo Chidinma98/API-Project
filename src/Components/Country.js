@@ -7,15 +7,11 @@ class Country extends Component {
     constructor(props) {
         super(props)
 
-        // this.props.handleTraveledToggle = this.props.handleTraveledToggle.bind(this)
-        // this.handleClick = this.handleClick.bind(this)
+        
     }
 
 
-    // handleClick() {
-    //     this.props.handleTraveledToggle(this.props.place.name)
-
-    // }
+    
 
     render() {
         return (

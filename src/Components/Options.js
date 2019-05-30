@@ -7,9 +7,7 @@ class Options extends Component {
     }
 
 render(props){
-    //  const {countries} = this.props
-    // console.log(countries);
-    // console.log(this.props.countries);
+    
     return(
         <div>
 
