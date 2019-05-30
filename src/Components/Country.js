@@ -16,11 +16,11 @@ class Country extends Component {
     render() {
         return (
             <div className='places'>
-                <div className='country'>
-                    <h1 onClick={() => (this.props.handleTraveledToggle(this.props.place))}> T </h1>
-                    <h1 onClick={() => (this.props.handleTravelingToggle(this.props.place))}> W </h1>
+                <div className= {this.props.isTraveled? 'town': 'country'} >
+                    <h1 onClick={() => (this.props.handleTraveledToggle(this.props.place))}> * </h1>
+                    <h1 onClick={() => (this.props.handleTravelingToggle(this.props.place))}> + </h1>
                     <p>{this.props.place.name} </p>
-               
+               {}
                
                 </div>
             </div>

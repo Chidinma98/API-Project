@@ -22,6 +22,7 @@ class Traveled extends Component {
                     <h2>Currency: {this.props.currency}  ({this.props.symbol}) </h2>
                     <h2>Languages: {this.props.languages}</h2>
                     <h2>Subregion: {this.props. subregion}</h2>
+                <img src = {this.props.flag} />
 
                 </div>
 

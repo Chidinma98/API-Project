@@ -4,7 +4,7 @@ import './App.css';
 import axios from 'axios'
 import Traveled from './Components/Traveled'
 import Traveling from './Components/Traveling'
-// import Options from './Components/Options'
+
 import { Route, Link } from "react-router-dom";
 import Map from './Components/Map'
 import Country from './Components/Country'
@@ -95,7 +95,8 @@ this.setState({
   capital: detail.capital,
   languages:detail.languages[0].name,
   subregion: detail.subregion,
-  symbol: detail.currencies[0].symbol
+  symbol: detail.currencies[0].symbol,
+  flag: detail.flag
 })
 
   }
@@ -114,7 +115,7 @@ this.setState({
 {/* <h1>PASSPORT ++</h1> */}
           <h2><Link to='/map'> PASSPORT ++ </Link></h2>
           
-          <nav>
+          <nav >
             <ul>
               <li><Link to='/traveled'>Traveled</Link></li>
               <li><Link to='/traveling'>Traveling</Link></li>
@@ -136,6 +137,9 @@ this.setState({
             handleTraveledToggle={this.handleTraveledToggle}
             handleTravelingToggle={this.handleTravelingToggle}
             showInfo = {this.showInfo}
+            traveled = {this.state.traveled}
+            traveling = {this.state.traveling}
+            
           />} />
 
           <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo} 
@@ -145,6 +149,9 @@ this.setState({
           languages = {this.state.languages}
           subregion = {this.state.subregion}
           symbol = {this.state.symbol}
+          flag = {this.state.flag}
+
+          
           
           />} />
 
