@@ -81,7 +81,7 @@ class App extends Component {
 
 
 this.setState({
-  name:detail.name,
+  name: detail.name,
   flag:''
 })
 
@@ -125,7 +125,7 @@ this.setState({
 
           <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo} name = {this.state.name}/>} />
 
-          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo = {this.showInfo}/>} name = {this.state.name}/>
+          <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} showInfo = {this.showInfo}  name = {this.state.name}/>} />
 
           <Route exact path='/country'
 
