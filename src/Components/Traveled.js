@@ -11,7 +11,7 @@ render(props){
         <div>
             
     
-     {this.props.traveled.map((travel)=> (travel.name))} 
+     {this.props.traveled.map((travel, index)=> <h1 key = {index}>{travel.name}</h1>)} 
 
 
         </div>
