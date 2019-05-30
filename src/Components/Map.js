@@ -42,6 +42,7 @@ class Map extends Component {
               key = {index}
               handleTraveledToggle={this.props.handleTraveledToggle}
               handleTravelingToggle = {this.props.handleTravelingToggle}
+              showInfo = {this.props.showInfo}
               />))}
 
                

@@ -8,6 +8,7 @@ import Options from './Components/Options'
 import { Route, Link } from "react-router-dom";
 import Map from './Components/Map'
 import Country from './Components/Country'
+import { async } from 'q';
 
 
 
@@ -19,13 +20,16 @@ class App extends Component {
       places: [],
       continent: '',
       traveled: [],
-      traveling: []
+      traveling: [],
+      name:'',
+      flag:''
 
     }
 
     this.showsInput = this.showsInput.bind(this)
     this.handleTraveledToggle = this.handleTraveledToggle.bind(this)
     this.handleTravelingToggle = this.handleTravelingToggle.bind(this)
+    this.showInfo = this.showInfo.bind(this)
 
   }
 
@@ -40,7 +44,10 @@ class App extends Component {
       places: info.data,
       continent: this.refs.continent.value,
       traveled: [],
-      traveling: []
+      traveling: [],
+      name:'',
+      flag:''
+
     })
 
   }
@@ -66,6 +73,16 @@ class App extends Component {
     })
 
   }
+
+  
+  showInfo = async (place) => {
+    const fact = await axios.get( `https://restcountries.eu/rest/v2/name/${place}?fullText=true`)
+
+    console.log(fact)
+
+  }
+  
+  
 
   render() {
 
@@ -98,9 +115,10 @@ class App extends Component {
           <Route exact path='/map' render={() => <Map continent={this.state.continent} places={this.state.places}
             handleTraveledToggle={this.handleTraveledToggle}
             handleTravelingToggle={this.handleTravelingToggle}
+            showInfo = {this.showInfo}
           />} />
 
-          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} />} />
+          <Route exact path='/traveled' render={() => <Traveled traveled={this.state.traveled} showInfo = {this.showInfo}/>} />
 
           <Route exact path='/traveling' render={() => <Traveling continent={this.state.continent} traveling={this.state.traveling} />} />
 

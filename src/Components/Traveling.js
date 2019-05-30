@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import App from '../App'
+import { Route, Link } from "react-router-dom";
 
 class Traveling extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Traveling extends Component {
         return (
             <div>
 
-{this.props.traveling.map((travel, index)=> <h1 key = {index}>{travel.name } </h1> )}
+{this.props.traveling.map((travel, index)=> <h1 key = {index}> <Link>{travel.name } </Link> </h1> )}
             </div>
         )
 
