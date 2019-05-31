@@ -167,6 +167,7 @@ class App extends Component {
             languages={this.state.languages}
             subregion={this.state.subregion}
             symbol={this.state.symbol}
+            flag={this.state.flag}
 
 
 
