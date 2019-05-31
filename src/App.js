@@ -118,8 +118,8 @@ class App extends Component {
           <nav className = "main-nav">
             <ul>
               <li><Link to='/map'> Map </Link></li>
-              <li><Link to='/traveled'>Traveled</Link></li>
-              <li><Link to='/traveling'>Wish List</Link></li>
+              <li><Link to='/traveled'>Wishlist</Link></li>
+              <li><Link to='/traveling'>Traveled</Link></li>
             </ul>
           </nav>
 
@@ -133,6 +133,7 @@ class App extends Component {
           <button type='submit' name='info'>Submit</button>
 
         </form>
+        <p className = 'directions'>Click on Map to Begin</p>
 
 
 

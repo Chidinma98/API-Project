@@ -128,3 +128,11 @@ button {
 p{
   display: inline-block;
 }
+
+.directions{
+  position: absolute;
+  left: 300px;
+  top: 110px;
+  font-style: oblique;
+
+}
