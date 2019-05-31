@@ -11,10 +11,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Friday| Project Description/Wire-frames/Project Aprroval | Incomplete
 |Saturday| Wireframes / Priority Matrix / Functional Components | Incomplete
 |Sunday| React Components/API Calls| Incomplete
-|Monday|  | Incomplete
-|Tuesday|  | Incomplete
-|Wednesday| | Incomplete
-|Thursday|  | Incomplete
+|Monday|  | Work on Componments
+|Tuesday|  | Work on Componments
+|Wednesday| | Work on Componments
+|Thursday|  | CSS
 
 
 ## Project Description
