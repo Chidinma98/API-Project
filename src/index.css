@@ -51,6 +51,31 @@ code {
    justify-content: space-between; 
 }
 
+.container{
+  width:900px; 
+  height: 150px;
+
+}
+.destination{
+  width:300px; 
+  float:left; 
+  /* background: green;  */
+  height: 300px;
+  margin: 50px;
+  font-style: oblique;
+  color: gray;
+  background-color: aliceblue;
+}
+
+.details{
+  width:300px; 
+  height: 150px; 
+  float:right; 
+  /* background: blue; */
+  margin: 50px;
+  font-style: oblique;
+
+}
 
 ul {
   list-style-type: none;
