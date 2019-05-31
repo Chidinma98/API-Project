@@ -42,7 +42,7 @@ Create another component of all the places they have been.
 #### MVP 
 
 
-Be able to provide information to users based on the countries the clicked on.
+Be able to provide information to users based on the countries they clicked on.
 Create a component that stores info of all the places a person would like to go.
 Create another component of all the places they have been.
 
@@ -56,6 +56,9 @@ Allow people to link it to their social Media.
 ## React Architectural Design
 
 Define the the React components and the architectural design of your app.
+Map Component
+Traveled Component
+Travling Component
 
 #### [SAMPLE FROM A MAP BASED PROJECT](https://res.cloudinary.com/dvjtpejbw/image/upload/v1540221204/20181022_111216.jpg)
 
@@ -77,18 +80,15 @@ Based on the initial logic defined in the previous sections try and breakdown th
 #### SAMPLE.....
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| WillTravel| H | 3hrs| 3.5hrs |
-|Traveled | H | 7hrs| 2.5hrs |
-|  Map | H | 6hrs| 5hrs | 
+| WillTravel| H | 3hrs| 3.5hrs | 1 day
+|Traveled | H | 7hrs| 2.5hrs |1 day
+|  Map | H | 6hrs| 5hrs | 2 days
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
  
  #### SAMPLE.....
-| Library | What it Does | 
-| --- | :---: |  
-| Bootstrap | Used to help style my application | 
-| Giphy API | Used to get gifs to use | 
+
 
 
 ## Code Snippet
@@ -154,12 +154,23 @@ https://restcountries.eu/#api-endpoints-all
 #### SAMPLE.....
 ```
 function reverse(string) {
-	// here is the code to reverse a string of text
+	// This function allows users to put countries on their wishlist.
+
+     handleTraveledToggle(place) {
+    let newTraveledArray = [...this.state.traveled]
+    newTraveledArray.push(place)
+    this.setState({
+      traveled: newTraveledArray
+    })
+
+
+
+  }
 }
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ I changed the names on the navigation bar. However, it still takes you to the same link. It just made more sense to do it that way
 
 #### SAMPLE.....
 | Original Plan | Outcome | 
@@ -167,9 +178,7 @@ function reverse(string) {
 | Have one Book component | Split that component into BookInfo and BookInteraction as the component grew too complicated | 
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+ There was an issue with passing a prop between child and parent using methods. However, this problem was eradicated when I refactored everything.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+
 

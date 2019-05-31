@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import Options from './Options'
 import { Route, Link } from "react-router-dom";
 import Country from './Country'
 import Traveled from './Traveled';
@@ -43,7 +42,7 @@ class Map extends Component {
                         handleTraveledToggle={this.props.handleTraveledToggle}
                         handleTravelingToggle={this.props.handleTravelingToggle}
                         showInfo={this.props.showInfo}
-                            isTraveled = {(this.props.traveled.includes(place))}
+                        isTraveled={(this.props.traveled.includes(place))}
                     />))}
 
 

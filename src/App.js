@@ -8,7 +8,7 @@ import { Route, Link } from "react-router-dom";
 import Map from './Components/Map'
 import Country from './Components/Country'
 import './index.css'
-// import { async } from 'q';
+
 
 
 
@@ -113,9 +113,9 @@ class App extends Component {
 
 
 
-          <h1 className = 'intro'>PASSPORT ++</h1>
+          <h1 className='intro'>PASSPORT ++</h1>
 
-          <nav className = "main-nav">
+          <nav className="main-nav">
             <ul>
               <li><Link to='/map'> Map </Link></li>
               <li><Link to='/traveled'>Wishlist</Link></li>
@@ -124,16 +124,16 @@ class App extends Component {
           </nav>
 
         </header>
-        
-        
-        
-        
+
+
+
+
         <form onSubmit={this.showsInput}>
           <input type='text' name='location' placeholder="Choose A Contient" ref='continent' />
           <button type='submit' name='info'>Submit</button>
 
         </form>
-        <p className = 'directions'>Click on Map to Begin</p>
+        <p className='directions'>Click on Map to Begin</p>
 
 
 
