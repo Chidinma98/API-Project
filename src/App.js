@@ -119,7 +119,7 @@ class App extends Component {
             <ul>
               <li><Link to='/map'> Map </Link></li>
               <li><Link to='/traveled'>Traveled</Link></li>
-              <li><Link to='/traveling'>Traveling</Link></li>
+              <li><Link to='/traveling'>Wish List</Link></li>
             </ul>
           </nav>
 
