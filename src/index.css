@@ -20,24 +20,17 @@ code {
   color: gray;
   text-align: justify;
   font-style: oblique;
-  /* flex: 1 0 25%;; */
-  /* flex-grow: 1; */
-  /* width: 20%; */
-  /* height: 0px; */
   flex-grow: 1;
   font-size: 24px;
-  /* width: 40%; */
-  /* height: 100px; */
+
 }
 
 
 .town{
   border: 9px solid yellow;
   margin: 3px;
-  /* flex: 1 0 25%; */
    flex-grow: 1; 
-  /* width: 33%;
-  height: 100px; */ 
+
  
 
 }
@@ -45,9 +38,6 @@ code {
 .places{
   display: inline-block;
   align-content: left;
-  /* flex-direction: column;
-   
-  /* flex-wrap: wrap; */
    justify-content: space-between; 
 }
 
@@ -59,7 +49,6 @@ code {
 .destination{
   width:300px; 
   float:left; 
-  /* background: green;  */
   height: 300px;
   margin: 50px;
   font-style: oblique;
@@ -71,7 +60,6 @@ code {
   width:300px; 
   height: 150px; 
   float:right; 
-  /* background: blue; */
   margin: 50px;
   font-style: oblique;
 
@@ -113,7 +101,7 @@ input[type=text] {
   position: absolute;
   left: 2px;
   top: 130px;
-  /* background-color: white; */
+  
 
 
   padding: 0 20px;
