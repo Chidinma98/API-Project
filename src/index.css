@@ -14,16 +14,36 @@ code {
 }
 
 .country{
-  border: 9px solid #9F3DA4;
+  border: 3px solid #9F3DA4;
   margin: 3px;
-
+  /* flex: 1 0 25%;; */
+  /* flex-grow: 1; */
+  /* width: 20%; */
+  /* height: 0px; */
+  flex-grow: 1;
+  /* width: 40%; */
+  /* height: 100px; */
 }
 
 
 .town{
   border: 9px solid yellow;
   margin: 3px;
+  /* flex: 1 0 25%; */
+   flex-grow: 1; 
+  /* width: 33%;
+  height: 100px; */ 
+ 
 
+}
+
+.places{
+  display: inline-block;
+  align-content: left;
+  /* flex-direction: column;
+   
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
 }
 
 
@@ -31,18 +51,17 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 10%;
-  background-color: #f1f1f1;
-  height: 30%; /* Full height */
-  position: fixed; /* Make it stick, even on scroll */
-  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  overflow: hidden;
+  background-color: gray;
 }
 
 li a {
   display: block;
-  color: #000;
-  padding: 8px 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
+  float: left;
 }
 
 li a:hover {
