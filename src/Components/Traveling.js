@@ -9,8 +9,8 @@ class Traveling extends Component {
 
     render(props) {
         return (
-            <div>
-<div className = 'comlist'>
+            <div className = 'container'>
+<div className = 'destination'>
 {this.props.traveling.map((travel, index)=> <h1 key = {index}onClick = { () =>(this.props.showInfo(travel.name))}> {travel.name } </h1> )}
     </div>        
     <div className='details'>
@@ -20,6 +20,7 @@ class Traveling extends Component {
                     <h2>Currency: {this.props.currency}  ({this.props.symbol}) </h2>
                     <h2>Languages: {this.props.languages}</h2>
                     <h2>Subregion: {this.props. subregion}</h2>
+                    <img src = {this.props.flag}/>
                     
 
                 </div>
