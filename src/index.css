@@ -14,13 +14,18 @@ code {
 }
 
 .country{
-  border: 3px solid #9F3DA4;
+  border: 3px solid rgb(10, 153, 200);
+  border-radius: 20px;
   margin: 3px;
+  color: gray;
+  text-align: justify;
+  font-style: oblique;
   /* flex: 1 0 25%;; */
   /* flex-grow: 1; */
   /* width: 20%; */
   /* height: 0px; */
   flex-grow: 1;
+  font-size: 24px;
   /* width: 40%; */
   /* height: 100px; */
 }
@@ -43,7 +48,7 @@ code {
   /* flex-direction: column;
    
   /* flex-wrap: wrap; */
-  /* justify-content: center; */
+   justify-content: space-between; 
 }
 
 
@@ -82,7 +87,7 @@ header{
 input[type=text] {
   position: absolute;
   left: 2px;
-  top: 60px;
+  top: 130px;
   /* background-color: white; */
 
 
@@ -92,5 +97,9 @@ input[type=text] {
 button {
   position: absolute;
   left: 180px;
-  top: 60px;
+  top: 130px;
+}
+
+p{
+  display: inline-block;
 }

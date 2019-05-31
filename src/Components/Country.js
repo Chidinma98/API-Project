@@ -17,8 +17,8 @@ class Country extends Component {
         return (
             <div className='places'>
                 <div className= {this.props.isTraveled? 'town': 'country'} >
-                    <h1 onClick={() => (this.props.handleTraveledToggle(this.props.place))}> * </h1>
-                    <h1 onClick={() => (this.props.handleTravelingToggle(this.props.place))}> + </h1>
+                    <p onClick={() => (this.props.handleTraveledToggle(this.props.place))}> * </p>
+                    <p onClick={() => (this.props.handleTravelingToggle(this.props.place))}> + </p>
                     <p>{this.props.place.name} </p>
                {}
                
