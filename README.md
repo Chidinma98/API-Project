@@ -1,21 +1,5 @@
 # Project Overview
 
-## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
-|  Day | Deliverable | Status
-|---|---| ---|
-|Friday| Project Description/Wire-frames/Project Aprroval | Incomplete
-|Saturday| Wireframes / Priority Matrix / Functional Components | Incomplete
-|Sunday| React Components/API Calls| Incomplete
-|Monday|  | Work on Componments
-|Tuesday|  | Work on Componments
-|Wednesday| | Work on Componments
-|Thursday|  | CSS
-
 
 ## Project Description
 An e-passport
